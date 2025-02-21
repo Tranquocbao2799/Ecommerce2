@@ -1,3 +1,4 @@
+
 export interface ProductParams {
     name: string;
     images: [string];
@@ -9,4 +10,3 @@ export interface ProductParams {
     isFeatured: boolean;
     category: string;
 }
-    

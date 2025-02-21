@@ -1,4 +1,3 @@
-
 import mongoose, { Schema } from "mongoose";
 import { ProductParams } from "../dto/Product";
 const ProductSchema = new Schema({
@@ -41,3 +40,5 @@ const ProductSchema = new Schema({
         ref: "Category",
     },
 },
+
+export const PRODUCTS = mongoose.model('Product', ProductSchema)

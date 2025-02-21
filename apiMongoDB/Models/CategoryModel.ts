@@ -13,7 +13,7 @@ const CategorySchema = new Schema(
     },
     {
         toJSON: {
-            transform(doc, net) {
+            transform(doc, ret) {
                 delete ret.__V;
                 delete ret.createAt;
                 delete ret.updateAt;

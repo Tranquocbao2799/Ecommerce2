@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 import { PRODUCTS } from '../Models/ProductModel'
 import { ProductParams } from '../dto/Product';
 
-const path = 'http://localhost:8888/assets/'
+const path = 'http://localhost:9000/assets/'
 export const createProduct = async (req: Request, res: Response) => {
     const { name, price, oldPrice, description, quantity, inStock, isFeatured,
         category } = <ProductParams>req.body;
@@ -21,6 +21,42 @@ export const createProduct = async (req: Request, res: Response) => {
         await product.save();
         res.status(200).json(`Product create successfully :-) + ${path}!!!`)
     } catch (error) {
-        res.status(500).json(`Failed to create Product ${error}:-()
+        res.status(500).json(`Failed to create Product ${error}:-(`)
     } 
 }
+
+/*
+export const getProductByCatID = async (req: Request, res: Response) => {
+    console.log(req.params.CatID)
+    try {
+
+        const result = await PRODUCTS.find({ category: req.params.CatID })
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(`ProductByID fetch failed ${error}:-(`)
+    }
+}
+*/
+
+/*
+export const getProductByID = async (req: Request, res: Response) => {
+    console.log(req.params.CatID)
+    try {
+        const result = await PRODUCTS.findByID(req.params.id)
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(`ProductByID fetch failed ${error}:-(`)
+    }
+}
+*/
+
+/*
+export const getAllProducts = async (req: Request, res: Response) => {
+    try {
+        const result = await PRODUCTS.find().sort({ createAt: -1 })
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(`ProductByID fetch failed ${error}:-(`)
+    }
+}
+*/
