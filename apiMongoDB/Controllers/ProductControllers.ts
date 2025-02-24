@@ -25,7 +25,7 @@ export const createProduct = async (req: Request, res: Response) => {
     } 
 }
 
-/*
+
 export const getProductByCatID = async (req: Request, res: Response) => {
     console.log(req.params.CatID)
     try {
@@ -36,27 +36,35 @@ export const getProductByCatID = async (req: Request, res: Response) => {
         res.status(500).json(`ProductByID fetch failed ${error}:-(`)
     }
 }
-*/
 
-/*
 export const getProductByID = async (req: Request, res: Response) => {
-    console.log(req.params.CatID)
+//    console.log(req.params.CatID)
     try {
-        const result = await PRODUCTS.findByID(req.params.id)
+        const result = await PRODUCTS.findById(req.params.id)
         res.status(200).json(result)
     } catch (error) {
-        res.status(500).json(`ProductByID fetch failed ${error}:-(`)
+        res.status(500).json(`Product fetch failed ${error}:-(`)
     }
 }
-*/
 
-/*
+
+
 export const getAllProducts = async (req: Request, res: Response) => {
     try {
         const result = await PRODUCTS.find().sort({ createAt: -1 })
         res.status(200).json(result)
     } catch (error) {
-        res.status(500).json(`ProductByID fetch failed ${error}:-(`)
+        res.status(500).json(`Products not found ${error}:-(`)
+    }
+}
+
+/*
+export const getTrendingProducts = async (req: Request, res: Response) => {
+    try {
+        const result = await PRODUCTS.find({ isFeatured: true }).sort({ createdAt: -1 }).limit(4)
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(`Trending products fetch failed ${error}:-(^`)
     }
 }
 */
