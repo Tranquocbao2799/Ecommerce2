@@ -13,6 +13,7 @@ import DisplayMessage from "../Components/ProductDetails/DisplayMessage";
 const {width, height} = Dimensions.get("window");
 
 const ProductDetails = ({navigation, route}: RootStackScreenProps<"productDetails">) => {
+
     const {_id, images, name, price, oldPrice, inStock, color, size, description, quantity} = route.params;
     const gotoCartScreen = () => {
         if (cart.length === 0) {
@@ -210,3 +211,5 @@ const ProductDetails = ({navigation, route}: RootStackScreenProps<"productDetail
       </SafeAreaView>
     );
 }
+
+export default ProductDetails;

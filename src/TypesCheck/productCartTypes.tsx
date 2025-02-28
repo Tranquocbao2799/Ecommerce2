@@ -19,6 +19,7 @@ export interface CartItem {
 }
 
 export interface CartState {
+
     cart: {
         cart: ProductListParams[]
         length: number

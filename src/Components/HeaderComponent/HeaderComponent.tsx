@@ -4,6 +4,7 @@ import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 import { GoBack } from './GoBackButton';
 
 interface IHeaderParams {
+    pageTitle?: string;
     gotoPrevious?: () => void;
     search?: () => void;
     cartLength?: number;
@@ -44,7 +45,7 @@ export const HeadersComponent = ({ gotoPrevious, search, cartLength, gotoCartScr
           />
         </Pressable>
         <Pressable onPress={gotoCartScreen}>
-            <View style={{styles.cartNum}}>
+            <View>
                 <Text style={{color: "pink"}}>
                     {cartLength}
                 </Text>
