@@ -179,7 +179,11 @@ const HomeScreen = ({navigation, route}: TabsStackScreenProps<"Home">) => {
                             }}
                             key={index}
                             pStyleProps={{"resizeMode": "contain", "width": 100, height: 90, "marginBottom": 5}}   
-                            productProps={{}} 
+                            productProps={{
+                                "onPress": () => {
+                                    navigation.navigate("productDetails", item)
+                                }
+                            }} 
                         ></ProductCard>
                     ))
                 }

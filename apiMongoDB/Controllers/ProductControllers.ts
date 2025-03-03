@@ -58,7 +58,7 @@ export const getAllProducts = async (req: Request, res: Response) => {
     }
 }
 
-/*
+
 export const getTrendingProducts = async (req: Request, res: Response) => {
     try {
         const result = await PRODUCTS.find({ isFeatured: true }).sort({ createdAt: -1 }).limit(4)
@@ -67,4 +67,4 @@ export const getTrendingProducts = async (req: Request, res: Response) => {
         res.status(500).json(`Trending products fetch failed ${error}:-(^`)
     }
 }
-*/
+

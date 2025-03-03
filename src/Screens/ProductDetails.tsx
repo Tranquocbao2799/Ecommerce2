@@ -183,6 +183,9 @@ const ProductDetails = ({navigation, route}: RootStackScreenProps<"productDetail
               padding: 10,
             }}
           >
+
+
+
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>{name}</Text>
             <Text style={{ fontSize: 16, color: "green" }}>{description}</Text>
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>Price: {price} $</Text>

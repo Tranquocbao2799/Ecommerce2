@@ -48,7 +48,7 @@ const UserAuth = ({ navigation, route }: RootStackScreenProps<"UserLogin">) => {
     };
     const SubmitUserLoginForm = () => {
         axios
-            .post("http://10.0.2.2:8888/user/loginUser", userLoginForm)
+            .post("http://10.106.20.70:9000/user/loginUser", userLoginForm)
             .then((response) => {
                 console.log(response);
                 const token = response.data.token;
